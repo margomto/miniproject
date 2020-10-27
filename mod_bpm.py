@@ -11,6 +11,5 @@ songs = Song.load_songs(input_file)
 for song in songs:
     song.change_speed(relative_bpm)
     
-
 Song.save_songs(songs,output_file)    
 
