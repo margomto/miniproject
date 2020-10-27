@@ -20,7 +20,6 @@ class Song:
 
     @staticmethod
     def load_songs(path):
-        songs = []
         with open(path) as f:
             for line in f:
                 each_song = line.strip('()').strip().split(',')
