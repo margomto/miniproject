@@ -25,8 +25,9 @@ class Song:
             for line in f:
                 each_song = line.strip('()').strip().split(',')
                 song = Song(each_song[0], each_song[1], each_song[2], 
-                each_song[3], each_song[4], each_song[5], each_song[6])
+                each_song[3], each_song[4], each_song[5], each_song[6]) 
                 songs.append(song)
+            return songs    
 
     @staticmethod
     def save_songs(songs, path):
