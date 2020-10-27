@@ -21,11 +21,12 @@ class Song:
     @staticmethod
     def load_songs(path):
         with open(path) as f:
+            songs = []
             for line in f:
                 each_song = line.strip('()').strip().split(',')
-                songs = [Song(each_song[0], each_song[1], each_song[2], 
-                each_song[3], each_song[4], each_song[5], each_song[6]) for song in songs]
-        return songs  
+                song = Song(each_song[0], each_song[1], each_song[2], 
+                each_song[3], each_song[4], each_song[5], each_song[6])
+                songs.append(song)
 
     @staticmethod
     def save_songs(songs, path):
